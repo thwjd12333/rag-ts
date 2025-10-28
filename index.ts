@@ -22,4 +22,9 @@ async function basicRagPipeline() {
 
     const splitDocs = await splitter.splitDocuments(docs);
     console.log("2. Document Split Success");
+
+    const embeddings = new OpenAIEmbeddings();
+    console.log("3. EMbedding Model Success")
+
+    const vectorStore = await MemoryVectorStore.fromDocuments()
 }
